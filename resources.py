@@ -33,7 +33,7 @@ resources = get_resources_list(trunk)
 
 writer = csv.DictWriter(
     open('resources.csv', 'w', encoding='UTF8', newline=''), 
-    fieldnames=['name','description','address','category','services','link']
+    fieldnames=['name','description','address','category','services','url']
 )
 
 writer.writeheader()
