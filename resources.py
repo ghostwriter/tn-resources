@@ -24,6 +24,7 @@ def get_resources_list(obj, resources = []):
     if 'children' in obj.keys() and obj['children'] != []:
         for item in obj['children']:
             if 'description' in item.keys():
+                item['category'] = obj['name']
                 resources.append(item)
             resources = get_resources_list(item, resources)
     return resources
